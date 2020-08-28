@@ -1,0 +1,14 @@
+<script>
+    $('#example').DataTable( {
+        dom: 'Bfrtip',
+        ajax: "/api/staff",
+        columns: [
+            { data: 'first_name' },
+            { data: 'last_name' },
+            { data: "position" },
+            { data: "office" },
+            { data: "start_date" },
+            { data: "salary", render: $.fn.dataTable.render.number( ',', '.', 0, '$' ) }
+        ]
+    } )
+</script>
